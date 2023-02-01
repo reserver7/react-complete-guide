@@ -8,7 +8,6 @@ function Expenses(props) {
       {props.expenses.map((data, index) => {
         return (
           <ExpenseItem
-            key={index}
             title={data.title}
             amount={data.amount}
             date={data.date}
