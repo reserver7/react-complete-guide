@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expenses";
@@ -26,10 +26,28 @@ const App = () => {
     },
   ];
 
+  const [expensesItem, setExpensesItem] = useState([]);
+
+  const addExpenseHandler = (prev) => {
+    console.log("App.js");
+    console.log(prev);
+
+    expenses.push(prev);
+    setExpensesItem(expenses);
+
+    console.log(expenses);
+  };
+
   return (
     <div>
-      <NewExpense />
-      <Expenses expenses={expenses} />
+      <NewExpense onAddExpense={addExpenseHandler} />
+      {/* {expensesItem.length > 0 ? (
+        <Expenses expenses={expensesItem} />
+      ) : (
+        <Expenses expenses={expenses} />
+      )} */}
+
+      <Expenses expenses={expensesItem.length > 0 ? expensesItem : expenses} />
     </div>
   );
 };
