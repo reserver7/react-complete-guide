@@ -1,5 +1,14 @@
 {
-    "gotoSymbolStack.maxStackPosition": 0,
-    "gotoSymbolStack.currentStackPosition": 0,
-    "gotoSymbolStack.filePositionInfo": []
+    "gotoSymbolStack.maxStackPosition": 1,
+    "gotoSymbolStack.currentStackPosition": 1,
+    "gotoSymbolStack.filePositionInfo": [
+        {
+            "textFile": "/Users/luke/Desktop/react/react-complete-guide/src/components/Expenses/Expenses.js",
+            "viewColumn": 2,
+            "textPosition": {
+                "line": 27,
+                "character": 42
+            }
+        }
+    ]
 }
